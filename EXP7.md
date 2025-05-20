@@ -1,57 +1,46 @@
-# Ex.No: 7  ATM Applicationn
+# Ex.No: 6 To check whether the string is Palindrome and generate test cases.
+
 ### DATE:                                                                            
-### REGISTER NUMBER : 
+### REGISTER NUMBER : 212222040054
 ### AIM: 
-For ATM system study its system specifications and report various bugs
-### Purpose:
+Write a Python program to check whether the string is Palindrome and generate test cases. 
+### Algorithm:
+1. Start
+2. Get an input from the user by prompting 
+3. Run a loop form 0 to len/2.
+4. Check if the characters are the same both from the start and the end till len/2. 
+5. If it is, return the result that it is a palindrome.
+6. Else, return that it is not a palindrome. 
+7. Stop the program.
+### Program:
+```
+def Palindrome(string):
+    for i in range(0, int(len(string)/2)): 
+        if(string[i] != string[len(string)-i-1]): 
+            return False 
+    return True 
+
+s = input("Enter a string: ") 
+
+c = 1 
+for i in s: 
+    if not(i.isalpha()): 
+        c = 0 
+        break # Added to stop checking once an invalid character is found
+
+if(c == 0): 
+    print("Enter a valid string") 
+else:
+    answer = Palindrome(s)
+    if(answer == True): 
+        print("The given string is a palindrome") 
+    else: 
+        print("The given string is not a palindrome")
+```
+## Output:
+![Screenshot (850)](https://github.com/user-attachments/assets/6db872fb-dffb-4505-9614-bf16f98a3054)
+![Screenshot (851)](https://github.com/user-attachments/assets/91313499-8961-48dd-b61c-7b5110158b7e)
 
 
-### Scope:
-
-
-### Intended Audience:
-
-
-
-### Product Perspective:
-
-
-
-
-### Product Functions:
-
-
-
-### Operative Environments:
-
-
-
-### Design/implementation constraints: 
-
-
-
-### Assumptions and Dependencies: 
-
-
-
-### Software interfaces 
-
-
-
-### Safety requirements: 
-
-
-
-### Security requirements: 
-
-
-
-### Possible Bugs:
-
-
-
-
-
-### Result:
-Thus, the ATM system specifications and reporting the various bugs is implemented and output was verified successfully
-
+## Result:
+Thus, a program to check palindrome has been written and test cases have been written and verified successfully.
